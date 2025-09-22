@@ -1,0 +1,26 @@
+<footer class="container">
+    <div class="links">
+        @for (link of links; track $index) {
+        <div>
+            <h4>{{ link.title }}</h4>
+            <ul>
+                @for (item of link.items; track $index) {
+                <li>
+                    <a>{{ item.name }}</a>
+                    @if(item.isNew){
+                    <div class="new">New</div>
+                    }
+                </li>
+                }
+            </ul>
+        </div>
+        }
+    </div>
+    <div class="copy-rights">
+        <div class="logo">
+            <img src="assets/images/logo.png" width="16" alt="logo">
+            <h2>Crowdfund</h2>
+        </div>
+        <p>© 2077 Crowdfund. All rights reserved.</p>
+    </div>
+</footer>

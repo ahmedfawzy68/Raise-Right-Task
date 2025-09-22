@@ -1,0 +1,26 @@
+<div class="mobile-drawer" [class.open]="isDrawerOpen">
+    <div class="drawer-overlay" (click)="closeDrawer()"></div>
+    <div class="drawer-content">
+        <div class="drawer-header">
+            <div class="logo">
+                <img src="assets/images/logo.png" width="32" alt="logo">
+                <h2>Crowdfund</h2>
+            </div>
+            <i (click)="closeDrawer()" class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="drawer-body">
+            <ul class="mobile-nav-links">
+                <li><a routerLink="/campaigns" routerLinkActive="active" (click)="closeDrawer()">Campaigns</a></li>
+                <li><a routerLink="/about-us" routerLinkActive="active" (click)="closeDrawer()">About</a></li>
+            </ul>
+
+            <div class="mobile-buttons">
+                <app-custom-btn routerLink="/signin" text="Log in" [customStyle]="{'width':'100%'}"
+                    (click)="closeDrawer()"></app-custom-btn>
+                <app-custom-btn routerLink="/signup" text="Sign up" (click)="closeDrawer()"
+                    [customStyle]="{'background-color': 'var(--brand-600)', 'color': 'white', 'width':'100%'}"></app-custom-btn>
+            </div>
+        </div>
+    </div>
+</div>

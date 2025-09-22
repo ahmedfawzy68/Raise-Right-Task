@@ -1,0 +1,22 @@
+<section class="container">
+    <app-auth-header title="Log in to your account"
+        subtitle="Welcome back! Please enter your details."></app-auth-header>
+    <form>
+        <app-custom-input [required]="true" type="email" label="Email"
+            placeholder="Enter your email"></app-custom-input>
+        <app-custom-input [required]="true" type="password" label="Password" placeholder="••••••••"></app-custom-input>
+
+        <div class="login-extras">
+            <label class="remember-me">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </label>
+            <a>Forgot Password?</a>
+        </div>
+        <app-custom-btn text="Get started"
+            [customStyle]="{'width': '100%', 'background-color': 'var(--brand-600)', 'color': 'white'}"></app-custom-btn>
+        <app-custom-btn text="Sign up with Google" iconImg="assets/images/google.png"
+            [customStyle]="{'width': '100%', 'box-shadow': '0 1px 2px 0 rgba(16, 24, 40, 0.05)', 'border': '1px solid  #D0D5DD', 'margin-top': '16px'}"></app-custom-btn>
+        <span class="signup-redirect">Don't have an account? <a routerLink="/signup">Sign up</a></span>
+    </form>
+</section>

@@ -1,0 +1,18 @@
+section {
+  padding-bottom: 96px;
+  .campaigns-list {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .campaigns-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .campaigns-list {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}

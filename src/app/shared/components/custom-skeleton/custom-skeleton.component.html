@@ -1,0 +1,14 @@
+<div *ngIf="shape !== 'text'; else textSkeleton" [class]="skeletonClasses" [ngStyle]="skeletonStyle">
+</div>
+
+<ng-template #textSkeleton>
+    <div class="skeleton-text-container">
+        <div *ngFor="let line of generateTextLines(); let last = last" [class]="skeletonClasses + ' skeleton-text-line'"
+            [ngStyle]="{
+        width: last && lines > 1 ? '60%' : width,
+        height: height,
+        marginBottom: last ? '0' : '8px'
+      }">
+        </div>
+    </div>
+</ng-template>

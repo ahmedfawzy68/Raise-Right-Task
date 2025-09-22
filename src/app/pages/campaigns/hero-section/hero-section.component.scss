@@ -1,0 +1,32 @@
+section {
+  // min-height: calc(100vh - 72px);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  padding-block: 96px;
+  text-align: center;
+
+  span {
+    color: var(--brand-600);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  h1 {
+    color: var(--Gray-900);
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -0.25px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: var(--Gray-600);
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,25 @@
+<nav class="container navbar">
+    <div class="rightside">
+        <div class="logo">
+            <img src="assets/images/logo.png" width="32" alt="logo">
+            <h2>Crowdfund</h2>
+        </div>
+        <ul class="nav-links desktop-only">
+            <li><a routerLink="/campaigns" routerLinkActive="active">Campaigns</a></li>
+            <li><a routerLink="/about-us" routerLinkActive="active">About</a></li>
+        </ul>
+    </div>
+
+    <div class="leftside">
+        <div class="desktop-buttons">
+            <app-custom-btn routerLink="/signin" text="Log in"></app-custom-btn>
+            <app-custom-btn routerLink="/signup" text="Sign up"
+                [customStyle]="{'background-color': 'var(--brand-600)', 'color': 'white'}"></app-custom-btn>
+        </div>
+
+        <i (click)="openDrawer()" class="fa-solid fa-bars mobile-only"></i>
+    </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<app-drawer [isDrawerOpen]="isDrawerOpen" (drawerClosed)="closeDrawer()"></app-drawer>

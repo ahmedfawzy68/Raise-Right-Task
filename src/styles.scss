@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --Gray-600: #535862;
+  --Gray-700: #344054;
+  --Gray-900: #181d27;
+  --brand-600: #7f56d9;
+  --primary-700: #6941c6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.signup-redirect {
+  color: var(--Gray-600);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 32px;
+  display: block;
+
+  a {
+    color: var(--primary-700);
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.new {
+  background-color: #ecfdf3;
+  color: #027a48;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 2px 8px;
+  border-radius: 16px;
+}

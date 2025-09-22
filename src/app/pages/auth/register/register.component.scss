@@ -1,0 +1,19 @@
+section {
+  max-width: 360px;
+  app-custom-input:not(:last-child) {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .instruction {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    span {
+      color: var(--Gray-600);
+      font-size: 14px;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+}

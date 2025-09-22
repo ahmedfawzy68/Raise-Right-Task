@@ -1,0 +1,28 @@
+<div class="details-grid">
+    <img [src]="campaignDetails?.imageUrl || 'assets/images/campaign-placeholder.png'" width="100%" alt="placeholder">
+    <div class="content">
+        <div class="slug">We’ve helped hundreds of users raise funds</div>
+        <h2>{{ campaignDetails?.description || 'Loading...' }}</h2>
+        <app-progress [progress]="60"></app-progress>
+
+        <div class="stats-grid">
+            <div class="stats">
+                <div class="value">{{ campaignDetails?.goal | currency:'USD':'symbol':'1.0-0' }}</div>
+                <span>Campaign Target</span>
+            </div>
+            <div class="stats">
+                <div class="value">{{ (campaignDetails?.currentAmount && campaignDetails?.goal) ?
+                    (campaignDetails?.currentAmount! / campaignDetails?.goal! * 100 | number: '1.0-0') : '0' }}%</div>
+                <span>Campaign Target Achieved</span>
+            </div>
+            <div class="stats">
+                <div class="value">{{ campaignDetails?.currentAmount | currency:'USD':'symbol':'1.0-0' }}</div>
+                <span>Raised Funds</span>
+            </div>
+            <div class="stats">
+                <div class="value">{{campaignDetails?.donors?.length}}+</div>
+                <span>Donors</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+.navbar {
+  padding-block: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .rightside {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 700;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: var(--Gray-600);
+          font-weight: 600;
+          cursor: pointer;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--brand-600);
+          }
+        }
+      }
+    }
+  }
+
+  .leftside {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .desktop-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+}
+
+// Responsive Design
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+// Mobile Breakpoint
+@media (max-width: 768px) {
+  .navbar {
+    .rightside {
+      gap: 20px;
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    .leftside {
+      .desktop-buttons {
+        display: none;
+      }
+    }
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+}
+
+// Tablet Breakpoint
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    .rightside {
+      gap: 30px;
+    }
+  }
+}
+
+.active {
+  color: var(--brand-600) !important;
+}

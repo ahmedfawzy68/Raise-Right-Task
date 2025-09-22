@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <header>
+            <div class="breadcrumb">
+                <a routerLink="/campaigns">Campaigns</a> • <span>Campaign Details</span>
+            </div>
+            <h1>{{ campaignDetails?.name || 'Loading...' }}</h1>
+        </header>
+
+        <app-details [campaignDetails]="campaignDetails"></app-details>
+
+        <app-new-donations [donations]="campaignDetails?.donors || []"></app-new-donations>
+
+        <app-donate-now></app-donate-now>
+    </div>
+    <app-partners></app-partners>
+    <app-new-campaigns></app-new-campaigns>
+</section>

@@ -1,0 +1,30 @@
+<section class="container">
+    <app-auth-header title="Create an account" subtitle="Start your 30-day free trial."></app-auth-header>
+    <form>
+        <app-custom-input [required]="true" type="text" label="Name" placeholder="Enter your name"></app-custom-input>
+        <app-custom-input [required]="true" type="email" label="Email"
+            placeholder="Enter your email"></app-custom-input>
+        <app-custom-input [required]="true" type="password" label="Password" placeholder="••••••••"></app-custom-input>
+        <div class="instruction">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect width="20" height="20" rx="10" fill="#D0D5DD" />
+                <path d="M6.25 10L8.75 12.5L13.75 7.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Must be at least 8 characters</span>
+        </div>
+        <div class="instruction">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect width="20" height="20" rx="10" fill="#D0D5DD" />
+                <path d="M6.25 10L8.75 12.5L13.75 7.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>Must contain one special character</span>
+        </div>
+        <app-custom-btn text="Sign in"
+            [customStyle]="{'width': '100%', 'background-color': 'var(--brand-600)', 'color': 'white', 'margin-top': '24px'}"></app-custom-btn>
+        <app-custom-btn text="Sign in with Google" iconImg="assets/images/google.png"
+            [customStyle]="{'width': '100%', 'box-shadow': '0 1px 2px 0 rgba(16, 24, 40, 0.05)', 'border': '1px solid  #D0D5DD', 'margin-top': '16px'}"></app-custom-btn>
+        <span class="signup-redirect">Already have an account? <a routerLink="/signin">Sign in</a></span>
+    </form>
+</section>

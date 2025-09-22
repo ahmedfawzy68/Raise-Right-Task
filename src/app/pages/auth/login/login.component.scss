@@ -1,0 +1,44 @@
+section {
+  width: fit-content;
+  margin: 0 auto;
+  app-custom-input:not(:last-child) {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .login-extras {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 24px;
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      input {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #d0d5dd;
+        border-radius: 4px;
+        accent-color: var(--brand-600);
+      }
+
+      span {
+        color: var(--Gray-700);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        user-select: none;
+      }
+    }
+    a {
+      color: var(--primary-700);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      cursor: pointer;
+    }
+  }
+}
