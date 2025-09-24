@@ -68,7 +68,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 30px;
 
     .mobile-nav-links {
@@ -97,14 +96,50 @@
       }
     }
 
+    .spacer {
+      flex: 1;
+    }
+
     .mobile-buttons {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin-top: auto;
     }
   }
 }
 
 .active {
   color: var(--brand-600) !important;
+}
+
+// Mobile responsive adjustments
+@media (max-height: 600px) {
+  .mobile-drawer {
+    .drawer-body {
+      gap: 20px;
+
+      .mobile-buttons {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  .mobile-drawer {
+    .drawer-body {
+      gap: 15px;
+      padding: 15px 20px;
+
+      .mobile-nav-links {
+        gap: 15px;
+      }
+
+      .mobile-buttons {
+        margin-top: 15px;
+        gap: 10px;
+      }
+    }
+  }
 }
